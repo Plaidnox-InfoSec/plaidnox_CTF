@@ -11,11 +11,11 @@ This small challenge is designed to evaluate your practical security skills, abi
 
 This challenge includes multiple services with various vulnerabilities:
 
-- **Flask Backend** (Port 5000): SQLi, SSRF vulnerabilities
-- **Node.js Service** (Port 3000): JWT, Code Injection
-- **Nginx Proxy** (Port 80, 8080): Request Smuggling, Cache Poisoning
-- **Frontend** (Port 8081): XSS vulnerability
-- **Mock Cloud Service** (Port 8000): Simulates AWS metadata endpoint
+- **Flask Backend** (Port 5000)
+- **Node.js Service** (Port 3000)
+- **Nginx Proxy** (Port 80, 8080)
+- **Frontend** (Port 8081)
+- **Mock Cloud Service** (Port 8000)
 
 ### 🚀 Quick Start
 
@@ -115,27 +115,6 @@ _Repeat this for all vulnerabilities you find._
 
 ---
 
-## 🧪 Testing & Automation
-
-### Automated Testing Scripts
-
-Three Python scripts are provided for testing:
-
-1. **test_exploits.py** - Tests all 8 vulnerabilities automatically
-   ```bash
-   python3 test_exploits.py
-   ```
-
-2. **exploit_toolkit.py** - Advanced exploitation framework
-   ```bash
-   python3 exploit_toolkit.py
-   ```
-
-3. **test_hints.py** - Tests the hints system (NEW)
-   ```bash
-   python3 test_hints.py
-   ```
-
 ### Manual Testing
 
 Access the web interface:
@@ -156,20 +135,9 @@ Email your final report to:
 
 ---
 
-## 📚 Additional Resources
-
-- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - ⚡ One-page cheat sheet for all commands
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** - Detailed installation and configuration
-- **[VULNERABILITIES.md](VULNERABILITIES.md)** - Complete exploitation reference
-- **[HINTS.md](HINTS.md)** - Progressive hints when you're stuck
-- **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing scripts documentation
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture overview
-- **[COMMANDS.md](COMMANDS.md)** - Comprehensive command reference
-- **[QUICKSTART.md](QUICKSTART.md)** - 5-minute setup guide
 
 ## Rules
 
-- Do **not** use automated tools only—manual understanding matters.
 - Do **not** attack domains outside the CTF environment.
 - Write your report clearly and professionally.
 - Partial findings are still accepted—submit whatever you complete.
@@ -195,3 +163,4 @@ We review based on:
 
 Show us your best problem-solving, curiosity, and practical security skills.  
 We’re excited to review your submission!
+
