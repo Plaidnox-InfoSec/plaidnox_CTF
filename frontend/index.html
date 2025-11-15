@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge Platform - PlaidNox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏁 CTF Challenge Platform</h1>
+            <p>PlaidNox Security Assessment</p>
+        </header>
+
+        <nav>
+            <button onclick="showSection('login')">Login</button>
+            <button onclick="showSection('calc')">Calculator</button>
+            <button onclick="showSection('fetch')">URL Fetcher</button>
+            <button onclick="showSection('comments')">Comments</button>
+            <button onclick="showSection('profile')">Profile</button>
+            <button onclick="showSection('hints')" class="hint-button">💡 Hints</button>
+        </nav>
+
+        <!-- Login Section -->
+        <div id="login" class="section active">
+            <h2>Login</h2>
+            <div class="form-group">
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+            <div id="login-result" class="result"></div>
+        </div>
+
+        <!-- Calculator Section (Code Injection) -->
+        <div id="calc" class="section">
+            <h2>Calculator</h2>
+            <div class="form-group">
+                <input type="text" id="calc-expression" placeholder="Enter expression (e.g., 2+2)">
+                <button onclick="calculate()">Calculate</button>
+            </div>
+            <div id="calc-result" class="result"></div>
+        </div>
+
+        <!-- URL Fetcher Section (SSRF) -->
+        <div id="fetch" class="section">
+            <h2>URL Fetcher</h2>
+            <div class="form-group">
+                <input type="text" id="fetch-url" placeholder="Enter URL to fetch">
+                <button onclick="fetchUrl()">Fetch</button>
+            </div>
+            <div id="fetch-result" class="result"></div>
+        </div>
+
+        <!-- Comments Section (XSS) -->
+        <div id="comments" class="section">
+            <h2>Comments Board</h2>
+            <div class="form-group">
+                <input type="text" id="comment-name" placeholder="Your name">
+                <textarea id="comment-text" placeholder="Your comment"></textarea>
+                <button onclick="addComment()">Post Comment</button>
+            </div>
+            <div id="comments-list" class="comments-list">
+                <!-- Comments will be displayed here - VULNERABLE TO XSS -->
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile" class="section">
+            <h2>User Profile</h2>
+            <div id="profile-result" class="result"></div>
+            <button onclick="getProfile()">Load Profile</button>
+        </div>
+
+        <!-- Hints Section -->
+        <div id="hints" class="section">
+            <h2>💡 Challenge Hints</h2>
+            <p class="hint-intro">Stuck on a challenge? Select a vulnerability and hint level to get progressive hints!</p>
+            
+            <div class="form-group">
+                <label for="hint-vuln">Challenge:</label>
+                <select id="hint-vuln">
+                    <option value="">-- Select Challenge --</option>
+                    <option value="sqli">SQL Injection</option>
+                    <option value="ssrf">SSRF</option>
+                    <option value="code_injection">Code Injection</option>
+                    <option value="jwt">JWT Attack</option>
+                    <option value="xss">XSS</option>
+                    <option value="smuggling">Request Smuggling</option>
+                    <option value="cache_poisoning">Cache Poisoning</option>
+                    <option value="cloud_metadata">Cloud Metadata</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="hint-level">Hint Level:</label>
+                <div class="hint-levels">
+                    <button onclick="getHint(1)" class="hint-level-btn">Level 1 (Gentle)</button>
+                    <button onclick="getHint(2)" class="hint-level-btn">Level 2 (Nudge)</button>
+                    <button onclick="getHint(3)" class="hint-level-btn">Level 3 (Detailed)</button>
+                    <button onclick="getHint(4)" class="hint-level-btn">Level 4 (Solution)</button>
+                </div>
+            </div>
+            
+            <div id="hint-result" class="result hint-display"></div>
+            
+            <div class="hint-info">
+                <h3>📚 Using Hints Effectively:</h3>
+                <ul>
+                    <li><strong>Level 1:</strong> Initial clue - where to start looking</li>
+                    <li><strong>Level 2:</strong> Technique hint - what vulnerability type to use</li>
+                    <li><strong>Level 3:</strong> Technical details - specific targets or methods</li>
+                    <li><strong>Level 4:</strong> Complete solution - exact payload or steps</li>
+                </ul>
+                <p class="hint-tip">💡 <strong>Tip:</strong> Try to solve challenges yourself first! Request hints only when truly stuck.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>CTF Challenge - Find the vulnerabilities and capture the flags!</p>
+            <p><strong>Hint:</strong> Check the browser console for API endpoints</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

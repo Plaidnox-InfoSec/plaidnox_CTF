@@ -1,0 +1,5 @@
+// Obfuscated Node.js server
+const _0x4a2b=['express','cors','body-parser','jsonwebtoken','axios','PORT','JWT_SECRET','HIDDEN_FLAG','JWT_FLAG','use','json','urlencoded','listen','log'];(function(_0x3c5d,_0x4a2b){const _0x5e3a=function(_0x1d4f){while(--_0x1d4f){_0x3c5d['push'](_0x3c5d['shift']());}};_0x5e3a(++_0x4a2b);}(_0x4a2b,0x123));const _0x5e3a=function(_0x3c5d,_0x4a2b){_0x3c5d=_0x3c5d-0x0;let _0x5e3a=_0x4a2b[_0x3c5d];return _0x5e3a;};const express=require(_0x5e3a('0x0'));const cors=require(_0x5e3a('0x1'));const bodyParser=require(_0x5e3a('0x2'));const jwt=require(_0x5e3a('0x3'));const app=express();app[_0x5e3a('0x9')](cors());app[_0x5e3a('0x9')](bodyParser[_0x5e3a('0xa')]());process['env'][_0x5e3a('0x7')]='FLAG{c0d3_1nj3ct10n_pwn3d}';process['env'][_0x5e3a('0x8')]='FLAG{jwt_alg0r1thm_c0nfus10n}';const PORT=process['env'][_0x5e3a('0x5')]||0xbb8;const JWT_SECRET=process['env'][_0x5e3a('0x6')]||'super_secret_jwt_key_123';
+
+// Original server.js should be used - this is just an obfuscated backup
+// The actual vulnerability implementation is in server.js

@@ -1,0 +1,25 @@
+{
+  "instance-id": "i-1234567890abcdef0",
+  "instance-type": "t2.micro",
+  "region": "us-east-1",
+  "availability-zone": "us-east-1a",
+  "local-ipv4": "172.31.45.67",
+  "public-ipv4": "54.123.45.67",
+  "ami-id": "ami-0c55b159cbfafe1f0",
+  "security-credentials": {
+    "AccessKeyId": "AKIAIOSFODNN7EXAMPLE",
+    "SecretAccessKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "Token": "AQoDYXdzEJr...example...token",
+    "Expiration": "2024-12-31T23:59:59Z"
+  },
+  "iam-role": "ctf-admin-role",
+  "user-data": "#!/bin/bash\necho 'FLAG{cl0ud_m3t4d4t4_l34k}' > /tmp/flag.txt",
+  "flag": "FLAG{cl0ud_m3t4d4t4_l34k}",
+  "secret-config": {
+    "database": "postgresql://admin:SuperSecretPass123@db.internal:5432/production",
+    "api-keys": {
+      "stripe": "sk_live_51HqExample123",
+      "aws": "AKIAIOSFODNN7EXAMPLE"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+# .gitignore for CTF Challenge
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+
+# Docker
+.dockerignore
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Cache
+nginx-proxy/cache/*
+!nginx-proxy/cache/.gitkeep
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Test
+.coverage
+htmlcov/
+.tox/
+
+# ============================================================
+# CTF SOLUTION FILES - DO NOT COMMIT TO PUBLIC REPOSITORY
+# ============================================================
+# These files contain flags, complete solutions, and exploitation guides
+# They should remain private for CTF integrity
+
+# Documentation with solutions/flags
+VULNERABILITIES.md
+HINTS.md
+TESTING_GUIDE.md
+QUICK_REFERENCE.md
+CHANGELOG.md
+
+# Automated exploitation scripts
+test_exploits.py
+exploit_toolkit.py
+test_hints.py
+
+# Solution files
+solutions/
+exploits/
+flags.txt
+writeup.md
+
